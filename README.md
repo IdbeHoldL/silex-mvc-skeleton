@@ -15,7 +15,7 @@ Then you can run these commands to start the project:
     composer install
     composer run
 
-The project will run on your localhost:8000 by default, and of course you can change it in the composer.json. And you **SHOULD** also update your project namespace in the composer.json, which is `My\Project` by default(don't forget updating the namespace in the code as well).
+The project will run on your `localhost:8000` by default, and of course you can change it in the composer.json. And you **SHOULD** also update your project namespace in the composer.json, which is `My\Project` by default(don't forget updating the namespace in the code as well).
 
 
 # What Provided
