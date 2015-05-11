@@ -1,6 +1,6 @@
 {
-    "name": "demo",
-    "description": "my silex skeleton demo",
+    "name": "chxj1992/Silex-MVC-Skeleton",
+    "description": "my silex mvc skeleton demo",
     "license": "MIT",
     "type": "project",
     "require": {
