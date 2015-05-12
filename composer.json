@@ -3,7 +3,14 @@
     "description": "my silex mvc skeleton project",
     "license": "MIT",
     "type": "project",
+    "authors": [
+        {
+            "name": "Xiaojing Chen",
+            "homepage": "https://github.com/chxj1992"
+        }
+    ],
     "require": {
+        "php": ">=5.4.0",
         "silex/silex": "~1.2",
         "phpunit/phpunit": "4.5.*",
         "silex/web-profiler": "1.0.*@dev",
