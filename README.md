@@ -1,6 +1,9 @@
 
 [Silex](http://silex.sensiolabs.org/documentation) is an awesome micro PHP framework based on the Symfony2 components. And this is an MVC skeleton project for Silex!
 
+# Requirements
+
+**PHP 5.4+**
 
 # Getting Started
 
