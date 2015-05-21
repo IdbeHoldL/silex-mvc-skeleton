@@ -1,3 +1,6 @@
+# Silex MVC Skeleton
+
+[![Build Status](https://travis-ci.org/chxj1992/Silex-MVC-Skeleton.svg?branch=master)](https://travis-ci.org/chxj1992/chxj1992/Silex-MVC-Skeleton) 
 
 [Silex](http://silex.sensiolabs.org/documentation) is an awesome micro PHP framework based on the Symfony2 components. And this is an MVC skeleton project for Silex!
 
