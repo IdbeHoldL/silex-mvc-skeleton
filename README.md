@@ -7,7 +7,7 @@
 
 # Getting Started
 
-Make sure the `composer` is already install on your machine. If it's not, you can follow [this document](https://getcomposer.org/doc/00-intro.md) or just simple run the:
+Make sure the `composer` is already installed on your machine. If it's not, you can follow [this document](https://getcomposer.org/doc/00-intro.md) or just simple run the:
 
     curl -sS https://getcomposer.org/installer | php
     mv composer.phar /usr/local/bin/composer
@@ -25,14 +25,14 @@ The project will run on your `localhost:8000` by default, and of course you can 
 
 **[PHPUNIT](https://phpunit.de)**
 
-You can run all the tests in your project(src/Test) easily by executing `phpunit` in the root of your project. And There are alreay some base class for the functional tests and db test, which means your test class can extends them.
+You can run all the tests in your project(src/Test) easily by executing `phpunit` in the root of your project. And There are alreay some base class for the functional tests and database test.
 
 
 **[PHPCI](https://www.phptesting.org)**
 
 PHPCI is an easy continuous integration tool specifically designed for PHP(and also written in PHP).
 
-And there's also [a blog(in chinese) about phpci](http://blog.chxj.name/php-continuous-integration-phpci/). Hope you can like it.
+And there's also [a blog about phpci(in chinese)](http://blog.chxj.name/php-continuous-integration-phpci/). Hope you can like it.
     
 
 **[Doctrine Migrations](http://docs.doctrine-project.org/projects/doctrine-migrations/en/latest/reference/introduction.html)**
