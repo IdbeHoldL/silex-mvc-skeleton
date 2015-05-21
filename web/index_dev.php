@@ -14,14 +14,14 @@ if (isset($_SERVER['HTTP_CLIENT_IP'])
 }
 */
 
-require_once __DIR__.'/../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 Debug::enable();
 
 //register 3rd party services
 $app = require __DIR__ . '/../src/app.php';
 //load dev environment configuration
-require __DIR__.'/../config/dev.php';
+require __DIR__ . '/../config/dev.php';
 //dependency injection
 require __DIR__ . '/../src/services.php';
 //controller routers

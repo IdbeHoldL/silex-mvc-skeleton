@@ -4,7 +4,7 @@
 
 
 $app->get('/', function () use ($app) {
-    return $app['twig']->render('index.html', array('user'=>$app['user']));
+    return $app['twig']->render('index.html', array('user' => $app['user']));
 });
 
 $app->mount('/home', $app['HomeController']);

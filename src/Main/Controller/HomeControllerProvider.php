@@ -19,21 +19,20 @@ class HomeControllerProvider implements ControllerProviderInterface
     {
         $controllers = $app['controllers_factory'];
 
-        $controllers->get('/home', $this->home())
-//            ->secure('ROLE_USER')
+        $controllers->get('/', $this->display())//            ->secure('ROLE_USER')
         ;
 
         return $controllers;
     }
 
-    public function home()
+    public function display()
     {
         return function (Application $app) {
             try {
                 $this->someService->someMethod();
-                return $app->json(['ret' => true, 'data' => '']);
+                return $app->json(['ret' => true, 'data' => 'success']);
             } catch (\Exception $e) {
-                return $app->json(['ret' => false, 'data' => '']);
+                return $app->json(['ret' => false, 'data' => 'error: ' . $e->getMessage()]);
             }
         };
     }

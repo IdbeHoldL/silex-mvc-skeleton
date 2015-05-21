@@ -4,16 +4,18 @@ namespace My\Project\Test\Functional;
 
 use Silex\WebTestCase;
 
-abstract class BaseWebTestCase extends WebTestCase {
+abstract class BaseWebTestCase extends WebTestCase
+{
 
     protected $db;
+    protected $client;
 
     public function createApplication()
     {
         //register 3rd party services
         $app = require __DIR__ . '/../../app.php';
         //load test environment configuration
-        require __DIR__.'/../../../config/test.php';
+        require __DIR__ . '/../../../config/test.php';
         //dependency injection
         require __DIR__ . '/../../services.php';
         require __DIR__ . '/../../routers.php';
@@ -27,7 +29,12 @@ abstract class BaseWebTestCase extends WebTestCase {
         return $app;
     }
 
-    protected function someMethod() {
+    protected function assertResponseOKAndFetchContent()
+    {
+        $response = $this->client->getResponse();
+        $this->assertTrue($response->isOk());
+
+        return json_decode($response->getContent());
     }
 
 }

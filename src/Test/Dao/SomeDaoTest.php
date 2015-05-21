@@ -17,8 +17,12 @@ class SomeDaoTest extends BaseDaoTestCase
         $this->someDao = $this->app['SomeDao'];
     }
 
-    public function test_for_some_query() {
-        // ...
+    // this is more likely to be an integration test.
+    public function test_for_some_query()
+    {
+        $data = $this->someDao->someQuery();
+
+        $this->assertEquals(['hello', 'world'], $data);
     }
 
 

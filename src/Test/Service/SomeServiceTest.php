@@ -2,19 +2,29 @@
 
 namespace My\Project\Main\Service;
 
-class SomeServiceTest extends \PHPUnit_Framework_TestCase {
+use Silex\Application;
 
-    private $app;
+/**
+ * @property \Prophecy\Prophecy\ObjectProphecy someDao
+ */
+class SomeServiceTest extends \PHPUnit_Framework_TestCase
+{
+
     private $someService;
 
     public function setUp()
     {
-        $this->app = $this->initApp();
+        $app = new Application();
+        $this->someDao = $this->prophesize('My\Project\Main\Dao\SomeDao');
+        $app['SomeDao'] = $this->someDao->reveal();
 
-        $this->someService = $this->app['SomeService'];
+        $this->someService = new SomeService($app);
     }
 
-    public function test_for_some_method() {
-        // ...
+    public function test_some_method_should_call_some_query_in_dao()
+    {
+        $this->someDao->someQuery()->shouldBeCalled();
+
+        $this->someService->someMethod();
     }
 }

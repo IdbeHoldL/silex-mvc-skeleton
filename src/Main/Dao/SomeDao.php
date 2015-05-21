@@ -14,9 +14,14 @@ class SomeDao
         $this->db = $app['db'];
     }
 
-    public function someQuery() {
+    public function someQuery()
+    {
+
         $this->queryBuilder = $this->db->createQueryBuilder();
+
         // ...
+
+        return ['hello', 'world'];
     }
 
 

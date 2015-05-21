@@ -15,7 +15,7 @@ $app['db.options'] = array(
     'charset' => 'utf8',
 );
 
-require __DIR__.'/security.php';
+require __DIR__ . '/security.php';
 
 // enable the debug mode
 $app['debug'] = true;
