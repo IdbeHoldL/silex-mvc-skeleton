@@ -5,7 +5,7 @@
 [Silex](http://silex.sensiolabs.org/documentation) is an awesome micro PHP framework based on the Symfony2 components. And this is an MVC skeleton project for Silex!
 
 
-# Getting Started
+### Getting Started
 
 Make sure the `composer` is already installed on your machine. If it's not, you can follow [this document](https://getcomposer.org/doc/00-intro.md) or just simple run the:
 
@@ -21,7 +21,7 @@ Then you can run these commands to start the project:
 The project will run on your `localhost:8000` by default, and of course you can change it in the composer.json. And you **SHOULD** also update your project namespace in the composer.json, which is `My\Project` by default(don't forget updating the namespace in the code as well).
 
 
-# What Provided
+### What Provided
 
 **[PHPUNIT](https://phpunit.de)**
 
