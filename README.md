@@ -61,7 +61,7 @@ Silex-SimpleUser is a third-party user module for a Silex project, and the `User
 
 ### Problems Shooting
 
-+ If you choose to run the project in Docker, you may have some networking problem when it comes to the `composer install` step, Which is because docker sets its DNS to 8.8.8.8 and 8.8.8.4 by default. And If you can not access google's DNS for some reason (which is normal in China), you should set the DNS for docker manaully:
++ If you choose to run the project in Docker, you may have some networking problem when it comes to the `composer install` step, Which is because docker sets its DNS to `8.8.8.8` and `8.8.8.4` by default. If you can not access google DNS for some reason (which is normal in China), you should set the DNS for docker manaully:
     
     1. Identify DNS using following command: `nm-tool | grep DNS`, This result `DNS:192.168.1.1` in my case
     2. Update(Or create) `/etc/default/docker`: set `DOCKER_OPTS="--dns 192.168.1.1"`
