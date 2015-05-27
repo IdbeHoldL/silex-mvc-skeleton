@@ -16,6 +16,7 @@ if (isset($_SERVER['HTTP_CLIENT_IP'])
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
+date_default_timezone_set('UTC'); 
 Debug::enable();
 
 //register 3rd party services
