@@ -1,10 +1,13 @@
+# Silex MVC Skeleton
+
+[![Build Status](https://travis-ci.org/chxj1992/Silex-MVC-Skeleton.svg?branch=master)](https://travis-ci.org/chxj1992/Silex-MVC-Skeleton) 
 
 [Silex](http://silex.sensiolabs.org/documentation) is an awesome micro PHP framework based on the Symfony2 components. And this is an MVC skeleton project for Silex!
 
 
-# Getting Started
+### Getting Started
 
-Make sure the `composer` is already install on your machine. If it's not, you can follow [this document](https://getcomposer.org/doc/00-intro.md) or just simple run the:
+Make sure the `composer` is already installed on your machine. If it's not, you can follow [this document](https://getcomposer.org/doc/00-intro.md) or just simple run the:
 
     curl -sS https://getcomposer.org/installer | php
     mv composer.phar /usr/local/bin/composer
@@ -18,18 +21,18 @@ Then you can run these commands to start the project:
 The project will run on your `localhost:8000` by default, and of course you can change it in the composer.json. And you **SHOULD** also update your project namespace in the composer.json, which is `My\Project` by default(don't forget updating the namespace in the code as well).
 
 
-# What Provided
+### What Provided
 
 **[PHPUNIT](https://phpunit.de)**
 
-You can run all the tests in your project(src/Test) easily by executing `phpunit` in the root of your project. And There are alreay some base class for the functional tests and db test, which means your test class can extends them.
+You can run all the tests in your project(src/Test) easily by executing `phpunit` in the root of your project. And There are alreay some base class for the functional tests and database test.
 
 
 **[PHPCI](https://www.phptesting.org)**
 
 PHPCI is an easy continuous integration tool specifically designed for PHP(and also written in PHP).
 
-And there's also [a blog(in chinese) about phpci](http://blog.chxj.name/php-continuous-integration-phpci/). Hope you can like it.
+And there's also [a blog about phpci(in chinese)](http://blog.chxj.name/php-continuous-integration-phpci/). Hope you can like it.
     
 
 **[Doctrine Migrations](http://docs.doctrine-project.org/projects/doctrine-migrations/en/latest/reference/introduction.html)**
