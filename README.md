@@ -7,16 +7,24 @@
 
 ### Getting Started
 
-Make sure the `composer` is already installed on your machine. If it's not, you can follow [this document](https://getcomposer.org/doc/00-intro.md) or just simple run the:
+There are two options to run this project:
 
-    curl -sS https://getcomposer.org/installer | php
-    mv composer.phar /usr/local/bin/composer
++ Locally (Require: PHP5.4+ installed)
 
+    Make sure the `composer` is already installed on your machine. If it's not, you can follow [this document](https://getcomposer.org/doc/00-intro.md) or just simple run the:
 
-Then you can run these commands to start the project:
+        curl -sS https://getcomposer.org/installer | php
+        mv composer.phar /usr/local/bin/composer
 
-    composer install
-    composer run
+    Then you can run these commands to start the project:
+
+        composer install
+        composer run
+    
++ In Docker (Require: [Docker](https://docs.docker.com/installation/#installation) installed)
+
+        docker build -t silex-mvc-skeleton .
+        docker run -d -p 8000:8000 silex-mvc-skeleton:latest
 
 The project will run on your `localhost:8000` by default, and of course you can change it in the composer.json. And you **SHOULD** also update your project namespace in the composer.json, which is `My\Project` by default(don't forget updating the namespace in the code as well).
 
@@ -49,3 +57,12 @@ The doctrine migrations is based on the [doctrine dbal](http://docs.doctrine-pro
 **[Silex SimpleUser](https://github.com/jasongrimes/silex-simpleuser)**
 
 Silex-SimpleUser is a third-party user module for a Silex project, and the `UserManager` object in the library can be very useful. There's a [nice tutorial](http://www.jasongrimes.org/2014/09/simple-user-management-in-silex/) for the library.
+
+
+### Problems Shooting
+
++ If you choose to run the project in Docker, you may have some networking problem when it comes to the `composer install` step, Which is because docker sets its DNS to 8.8.8.8 and 8.8.8.4 by default. And If you can not access google's DNS for some reason (which is normal in China), you should set the DNS for docker manaully:
+    
+    1. Identify DNS using following command: `nm-tool | grep DNS`, This result `DNS:192.168.1.1` in my case
+    2. Update(Or create) `/etc/default/docker`: set `DOCKER_OPTS="--dns 192.168.1.1"`
+    3. Restart Docker service: `sudo service docker restart`
