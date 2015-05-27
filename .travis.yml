@@ -6,3 +6,6 @@ php:
 
 install: composer install
 
+notifications:
+  email: false
+
